@@ -1,0 +1,10 @@
+//Стили для бургера
+.burger {
+  @include burger-btn(
+    $width: 30px,
+    $height: 20px,
+    $line-height: 2px,
+    $color: #000,
+    $color-active: currentColor
+  );
+}

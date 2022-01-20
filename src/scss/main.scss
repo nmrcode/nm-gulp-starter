@@ -1,0 +1,16 @@
+//Миксины
+@import "mixins/font-face";
+@import "mixins/burger";
+
+//Стартовый файл
+@import "settings/reset";
+@import "./start";
+@import "settings/settings";
+
+//Подключение UI компонентов (кнопки, инпуты, формы и тд)
+@import "ui/buttons";
+
+// Подключение блоков
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/footer";
