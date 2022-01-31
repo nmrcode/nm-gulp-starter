@@ -1,2 +1,2 @@
-import "./functions/_functions";
-import "./components/_components";
+import "./_functions";
+import "./_components";
