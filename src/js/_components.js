@@ -1,2 +1,2 @@
 //Кастомные селекты
-import "./selects";
+// import "./components/selects";

@@ -1,68 +1,62 @@
-@mixin burger-btn(
-  $width: 30px,
-  $height: 30px,
-  $line-height: 2px,
-  $color: #000,
-  $color-active: currentColor,
-  $z: 10
-) {
-  position: relative;
-  z-index: $z;
-  border: none;
-  padding: 0;
-  width: $width;
-  height: $height;
-  color: $color;
-  background-color: transparent;
-  cursor: pointer;
+@mixin burger-btn($width: 30px, $height: 30px, $line-height: 2px, $color: #000, $color-active: currentColor, $z: 10) {
+   position: relative;
+   z-index: $z;
+   border: none;
+   padding: 0;
+   width: $width;
+   height: $height;
+   color: $color;
+   background-color: transparent;
+   cursor: pointer;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: $line-height;
-    background-color: currentColor;
-    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-  }
-
-  &::before {
-    top: 0;
-  }
-
-  &::after {
-    top: calc(100% - $line-height);
-  }
-
-  &__line {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: $line-height;
-    background-color: currentColor;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &--active {
-    color: $color-active;
-    &::before {
-      top: 50%;
-      transform: rotate(45deg);
+   &::before,
+   &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: $line-height;
+      background-color: currentColor;
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
+   }
 
-    &::after {
+   &::before {
+      top: 0;
+   }
+
+   &::after {
+      top: calc(100% - $line-height);
+   }
+
+   &__line {
+      position: absolute;
+      left: 0;
       top: 50%;
-      transform: rotate(-45deg);
-      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
-
-    .burger__line {
-      transform: scale(0);
+      width: 100%;
+      height: $line-height;
+      background-color: currentColor;
+      transform: translateY(-50%);
       transition: transform 0.3s ease-in-out;
-    }
-  }
+   }
+
+   &--active {
+      color: $color-active;
+
+      &::before {
+         top: 50%;
+         transform: rotate(45deg);
+         transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      }
+
+      &::after {
+         top: 50%;
+         transform: rotate(-45deg);
+         transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      }
+
+      .burger__line {
+         transform: scale(0);
+         transition: transform 0.3s ease-in-out;
+      }
+   }
 }
