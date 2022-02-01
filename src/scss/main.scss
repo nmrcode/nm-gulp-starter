@@ -1,8 +1,4 @@
-@import "vendors/normalize";
 @import "vendors/reset";
-
-//Плагины
-@import "vendors/nm-select"; //Стили для select-плагина
 
 //Миксины
 @import "mixins/font-face";
@@ -11,6 +7,9 @@
 //Настройки проекта
 @import "./start";
 @import "./settings";
+
+//Плагины
+@import "vendors/nm-select"; //Стили для select-плагина
 
 //Подключение UI компонентов (кнопки, инпуты, формы и тд)
 @import "blocks/ui/buttons";
