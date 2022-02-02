@@ -12,31 +12,27 @@ const sass = require("sass");
 const gulpSass = require("gulp-sass");
 const mainSass = gulpSass(sass);
 const cleanCSS = require("gulp-clean-css");
-const webpCss = require("gulp-webp-css");
 const gulpIf = require("gulp-if");
 const rename = require("gulp-rename");
 const groupMedia = require("gulp-group-css-media-queries");
 
 const scss = () => {
-   return (
-      src(path.scss.src, { sourcemaps: setting.isDev })
-         .pipe(
-            plumber({
-               errorHandler: notify.onError((error) => ({
-                  title: "SCSS",
-                  message: error.message,
-               })),
-            })
-         )
+   return src(path.scss.src, { sourcemaps: setting.isDev })
+      .pipe(
+         plumber({
+            errorHandler: notify.onError((error) => ({
+               title: "SCSS",
+               message: error.message,
+            })),
+         })
+      )
 
-         .pipe(mainSass())
-         .pipe(gulpIf(setting.isProd, autoprefixer(setting.autoprefixer)))
-         // .pipe(cleanCSS(setting.cleancss))
-         .pipe(gulpIf(setting.isProd, webpCss()))
-         .pipe(gulpIf(setting.isProd, groupMedia()))
-         .pipe(rename({ extname: ".min.css" }))
-         .pipe(dest(path.scss.dest, { sourcemaps: setting.isDev }))
-   );
+      .pipe(mainSass())
+      .pipe(gulpIf(setting.isProd, autoprefixer(setting.autoprefixer)))
+      .pipe(cleanCSS(setting.cleancss))
+      .pipe(gulpIf(setting.isProd, groupMedia()))
+      .pipe(rename({ extname: ".min.css" }))
+      .pipe(dest(path.scss.dest, { sourcemaps: setting.isDev }));
 };
 
 module.exports = scss;

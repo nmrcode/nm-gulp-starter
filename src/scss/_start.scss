@@ -1,6 +1,6 @@
 //Контейнер
-$content-width-figma: 1170px; //Ширина контейнера в фигме
-$container-offset: 15px; //Отступы безопасности
+$content-width-figma: 1170; //Ширина контейнера в фигме
+$container-offset: 15; //Отступы безопасности
 $container-width: calc($content-width-figma + $container-offset * 2);
 
 //Цвета (color-название цвета)
@@ -29,10 +29,4 @@ $font-color: $color-primary;
 
 //Размеры
 $site-min-width: 320px;
-
-//breakpoints
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-$xxl: 1400px;
+$site-max-width: 1920; // Нужен для работы адаптивного свойства

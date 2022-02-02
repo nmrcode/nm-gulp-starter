@@ -1,8 +1,10 @@
 @import "vendors/reset";
 
 //Миксины
-@import "mixins/font-face";
-@import "mixins/burger";
+@import "mixins/font-face"; //Подключение шрифтов
+@import "mixins/burger"; // Тройной бургер
+@import "mixins/ad-value"; // Адаптивное свойство
+@import "mixins/breakpoints"; // Брейкпоинты и hover только для пк
 
 //Настройки проекта
 @import "./start";

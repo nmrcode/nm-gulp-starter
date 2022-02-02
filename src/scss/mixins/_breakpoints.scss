@@ -1,0 +1,62 @@
+//----------PC FIRST
+@mixin pc_576 {
+   @media (max-width: 575.98px) {
+      @content;
+   }
+}
+@mixin pc_768 {
+   @media (max-width: 767.98px) {
+      @content;
+   }
+}
+@mixin pc_992 {
+   @media (max-width: 991.98px) {
+      @content;
+   }
+}
+@mixin pc_1200 {
+   @media (max-width: 1199.98px) {
+      @content;
+   }
+}
+@mixin pc_1400 {
+   @media (max-width: 1399.98px) {
+      @content;
+   }
+}
+
+//MOBILE FIRST
+@mixin mb_576 {
+   @media (min-width: 575.98px) {
+      @content;
+   }
+}
+@mixin mb_768 {
+   @media (min-width: 767.98px) {
+      @content;
+   }
+}
+@mixin mb_992 {
+   @media (min-width: 991.98px) {
+      @content;
+   }
+}
+@mixin mb_1200 {
+   @media (min-width: 1199.98px) {
+      @content;
+   }
+}
+@mixin mb_1400 {
+   @media (min-width: 1399.98px) {
+      @content;
+   }
+}
+
+//ONLY PC HOVER
+@mixin pc_hover {
+   @media not all and (pointer: coarse) {
+      &:hover {
+         @content;
+      }
+   }
+}

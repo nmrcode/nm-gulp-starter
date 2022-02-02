@@ -1,0 +1,34 @@
+// Адаптивные свойства
+@mixin ad-value($property, $startSize, $minSize, $type) {
+   $addSize: $startSize - $minSize;
+
+   @if $type==1 {
+      // Только если меньше контейнера
+      #{$property}: $startSize + px;
+
+      @media (max-width: #{$container-width + px}) {
+         #{$property}: calc(
+            #{$minSize + px} + #{$addSize} *
+               ((100vw - 320px) / #{$container-width - 320})
+         );
+      }
+   } @else if $type==2 {
+      // Только если больше контейнера
+      #{$property}: $startSize + px;
+
+      @media (min-width: #{$container-width + px}) {
+         #{$property}: calc(
+            #{$minSize + px} #{$addSize} *
+               ((100vw - 320px) / #{$site-max-width - 320})
+         );
+      }
+   } @else {
+      // Всегда
+      #{$property}: calc(
+         #{$minSize +
+            px} +
+            #{$addSize} *
+            ((100vw - 320px) / #{$site-max-width - 320})
+      );
+   }
+}
