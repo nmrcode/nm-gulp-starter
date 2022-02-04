@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "vendors/reset";
 
 //Миксины
@@ -5,13 +6,15 @@
 @import "mixins/burger"; // Тройной бургер
 @import "mixins/ad-value"; // Адаптивное свойство
 @import "mixins/breakpoints"; // Брейкпоинты и hover только для пк
+@import "mixins/rem-em-prc"; // Брейкпоинты и hover только для пк
 
 //Настройки проекта
 @import "./start";
 @import "./settings";
+@import "./blocks/common/common";
 
-//Плагины
-@import "vendors/nm-select"; //Стили для select-плагина
+//Стили для плагинов
+@import "./vendors";
 
 //Подключение UI компонентов (кнопки, инпуты, формы и тд)
 @import "blocks/ui/buttons";

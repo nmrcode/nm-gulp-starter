@@ -1,4 +1,11 @@
-@mixin burger-btn($width: 30px, $height: 30px, $line-height: 2px, $color: #000, $color-active: currentColor, $z: 10) {
+@mixin burger-btn(
+   $width: 30px,
+   $height: 20px,
+   $line-height: 2px,
+   $color: #000,
+   $color-active: currentColor,
+   $z: 10
+) {
    position: relative;
    z-index: $z;
    border: none;
@@ -39,7 +46,7 @@
       transition: transform 0.3s ease-in-out;
    }
 
-   &--active {
+   &._active {
       color: $color-active;
 
       &::before {
