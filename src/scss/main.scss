@@ -11,7 +11,9 @@
 //Настройки проекта
 @import "./start";
 @import "./settings";
+@import "./blocks/common/common";
 
+//Стили для плагинов
 @import "./vendors";
 
 //Подключение UI компонентов (кнопки, инпуты, формы и тд)
