@@ -4,14 +4,19 @@ $container-offset: 15; //Отступы безопасности
 $container-width: calc($content-width-figma + $container-offset * 2);
 
 //Цвета (color-название цвета)
-$color-primary: #000;
-$color-secondary: #000;
-$color-accent: #000;
+:root {
+   --color-primary: #000;
+   --color-secondary: #000;
+   --color-accent: #000;
+
+   --color-white: #fff;
+   --color-black: #000;
+}
 
 $font-family: "Yanone", sans-serif;
 $font-size: rem(26);
 $font-weight: 400;
-$font-color: $color-primary;
+$font-color: --color-primary;
 
 //Размеры
 $site-min-width: 320px;
