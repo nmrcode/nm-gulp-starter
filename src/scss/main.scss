@@ -9,6 +9,7 @@
 @import "mixins/rem-em-prc"; // Брейкпоинты и hover только для пк
 
 //Настройки проекта
+@import "./fonts";
 @import "./start";
 @import "./settings";
 @import "./blocks/common/common";
@@ -18,6 +19,7 @@
 
 //Подключение UI компонентов (кнопки, инпуты, формы и тд)
 @import "blocks/ui/buttons";
+@import "blocks/ui/forms";
 
 // Подключение блоков
 @import "blocks/header";

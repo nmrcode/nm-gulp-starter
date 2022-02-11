@@ -1,0 +1,14 @@
+// Шрифты
+//Миксин для подключения через шрифтов
+// @mixin font-face($font-family, $url, $weight, $style)
+
+@include font-face(
+   $font-family: Yanone,
+   $url: YanoneKaffeesatz-Medium,
+   $weight: 400,
+   $style: normal
+);
+
+//Подключение через Google Fonts import
+//&display=swap
+// @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
