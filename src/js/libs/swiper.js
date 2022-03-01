@@ -1,3 +1,10 @@
+/*
+Слайдер Swiper
+Документация:
+https://swiperjs.com/swiper-api
+Сниппет: n-swiper
+Не забыть подключить стили в scss/vendors.scss
+*/
 import Swiper, { Navigation } from "swiper";
 
 // Инициализация слайдеров
