@@ -15,6 +15,7 @@ const cleanCSS = require("gulp-clean-css");
 const gulpIf = require("gulp-if");
 const rename = require("gulp-rename");
 const groupMedia = require("gulp-group-css-media-queries");
+const minCSS = require("gulp-cssmin")
 
 const scss = () => {
    return src(path.scss.src, { sourcemaps: setting.isDev })
@@ -29,8 +30,9 @@ const scss = () => {
 
       .pipe(mainSass())
       .pipe(gulpIf(setting.isProd, autoprefixer(setting.autoprefixer)))
-      .pipe(cleanCSS(setting.cleancss))
       .pipe(gulpIf(setting.isProd, groupMedia()))
+      .pipe(gulpIf(setting.isProd, cleanCSS(setting.cleancss)))
+      .pipe(gulpIf(setting.isProd, minCSS()))
       .pipe(rename({ extname: ".min.css" }))
       .pipe(dest(path.scss.dest, { sourcemaps: setting.isDev }));
 };
