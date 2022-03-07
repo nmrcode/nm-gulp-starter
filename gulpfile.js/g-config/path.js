@@ -5,8 +5,8 @@ module.exports = {
    root: pathDest,
 
    html: {
-      src: pathSrc + "/html/*.html",
-      watch: pathSrc + "/html/**/*.html",
+      src: pathSrc + "/*.html",
+      watch: pathSrc + "/**/*.html",
       dest: pathDest,
    },
 

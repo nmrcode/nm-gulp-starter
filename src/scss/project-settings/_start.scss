@@ -1,0 +1,25 @@
+@use "sass:math";
+//Контейнер
+$content-width-figma: 1270; //Ширина контейнера в фигме
+$container-offset: 20; //Отступы безопасности
+$container-width: $content-width-figma + ($container-offset * 2);
+
+//Цвета
+
+   $color-primary: #000;
+   $color-secondary: #000;
+
+   $color-accent: #000;
+
+   $color-white: #fff;
+   $color-black: #000;
+
+
+$font-family: "Montserrat", sans-serif;
+$font-size: rem(16);
+$font-weight: 400;
+$font-color: $color-primary;
+
+//Размеры
+$site-min-width: 320px;
+$site-max-width: 1920; // Нужен для работы адаптивного свойства
