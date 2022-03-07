@@ -1,9 +1,11 @@
 // Подключение настроек
-@import "./start";
+@import "start";
 *,
 *::before,
 *::after {
    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 html,
@@ -28,10 +30,10 @@ body {
    display: flex;
    flex-direction: column;
    min-height: 100%;
-   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+   overflow: hidden;
 }
 
-.page {
+.main {
    flex: 1 1 auto;
    height: 100%;
    -webkit-text-size-adjust: 100%;
@@ -53,4 +55,17 @@ body {
    width: 1px;
    height: 1px;
    clip: rect(0 0 0 0);
+}
+
+.btn-reset {
+   cursor: pointer;
+   border: none;
+   padding: 0;
+   background: transparent;
+}
+
+.list-reset {
+   list-style: none;
+   margin: 0;
+   padding: 0;
 }

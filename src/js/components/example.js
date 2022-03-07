@@ -1,1 +1,1 @@
-console.log("Hello world");
+console.log("gulp-starter by nmcode");

@@ -1,4 +1,9 @@
 //----------PC FIRST
+@mixin pc_custom($width) {
+   @media (max-width: em($width)) {
+      @content;
+   }
+}
 @mixin pc_576 {
    @media (max-width: em(575.98)) {
       @content;
@@ -26,6 +31,11 @@
 }
 
 //MOBILE FIRST
+@mixin mb_custom($width) {
+   @media (min-width: em($width)) {
+      @content;
+   }
+}
 @mixin mb_576 {
    @media (min-width: em(575.98)) {
       @content;

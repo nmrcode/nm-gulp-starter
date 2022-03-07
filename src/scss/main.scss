@@ -1,6 +1,4 @@
 @use "sass:math";
-@import "vendors/reset";
-
 //Миксины
 @import "mixins/font-face"; //Подключение шрифтов
 @import "mixins/burger"; // Тройной бургер
@@ -9,19 +7,19 @@
 @import "mixins/rem-em-prc"; // Брейкпоинты и hover только для пк
 
 //Настройки проекта
-@import "./fonts";
-@import "./start";
-@import "./settings";
-@import "./blocks/common/common";
+@import "project-settings/fonts";
+@import "project-settings/start";
+@import "project-settings/settings";
+@import "blocks/common/main";
 
 //Стили для плагинов
 @import "./vendors";
 
 //Подключение UI компонентов (кнопки, инпуты, формы и тд)
-@import "blocks/ui/buttons";
-@import "blocks/ui/forms";
+@import "blocks/common/buttons";
+@import "blocks/common/forms";
 
 // Подключение блоков
 @import "blocks/header";
-@import "blocks/hero";
+
 @import "blocks/footer";
