@@ -40,6 +40,16 @@ body {
    scroll-behavior: smooth;
 }
 
+img {
+   display: block;
+   max-width: 100%;
+}
+
+a{
+   color: inherit;
+   text-decoration: none;
+}
+
 .container {
    margin: 0 auto;
    padding: 0 $container-offset + px;

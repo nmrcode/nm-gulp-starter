@@ -8,7 +8,8 @@
     "build dev": "gulp build",
     "build production": "gulp build --prod",
     "clear": "gulp clear",
-    "zip": "gulp zip"
+    "zip": "gulp zip",
+    "deploy on gh-pages": "gulp deploy"
   },
   "browserslist": [
     "last 3 versions"
@@ -38,6 +39,7 @@
     "gulp-favicons": "^3.0.0",
     "gulp-file-include": "^2.3.0",
     "gulp-fonter": "^0.3.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",

@@ -1,4 +1,4 @@
-const { watch, series, parallel } = require("gulp");
+const {watch, series, parallel} = require("gulp");
 
 //Пути
 const path = require("./g-config/path");
@@ -14,6 +14,7 @@ const images = require("./g-tasks/image");
 const fonts = require("./g-tasks/font");
 const js = require("./g-tasks/js");
 const copy = require("./g-tasks/copy");
+const deploy = require("../../../_Templates/nm-gulp-starter/gulpfile.js/g-tasks/gh-deploy");
 
 //Сервер
 const server = () => {
@@ -44,6 +45,7 @@ exports.images = images;
 exports.fonts = fonts;
 exports.js = js;
 exports.copy = copy;
+exports.deploy = deploy;
 
 const build = series(
    clear,
@@ -56,3 +58,4 @@ exports.clear = clear; // Удаление папки продакшена
 exports.dev = dev; //Разработка
 exports.build = build; //Сборка
 exports.zip = series(build, zip); //Архивация
+exports.deploy = deploy; //Архивация
